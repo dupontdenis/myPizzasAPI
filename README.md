@@ -2,6 +2,15 @@
 
 A simple REST API for pizzas - inspired by [ghibliapi.dev](https://ghibliapi.dev)
 
+## 🌐 Live Demo
+
+**API is live at:** [https://mypizzasapi.onrender.com/](https://mypizzasapi.onrender.com/)
+
+Try it now:
+- [Get all pizzas](https://mypizzasapi.onrender.com/API/pizzas)
+- [Get ingredient prices](https://mypizzasapi.onrender.com/API/ingredientPrices)
+- [Get pizzas with prices](https://mypizzasapi.onrender.com/API/pizzasWithPrices)
+
 ## Usage
 
 ```
@@ -51,7 +60,7 @@ Returns all pizzas:
 ## Example Usage
 
 ```javascript
-fetch("https://your-app.com/API/pizzas")
+fetch("https://mypizzasapi.onrender.com/API/pizzas")
   .then((res) => res.json())
   .then((pizzas) => console.log(pizzas));
 ```
