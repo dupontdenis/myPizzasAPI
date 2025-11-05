@@ -5,13 +5,13 @@
 const ingredientPrices = new Map([
   ["🍅", 0.5], // tomato
   ["🧀", 1.0], // cheese
-  ["🍄", 0.8], // mushrooms
-  ["🐷", 1.2], // ham/pork
-  ["🐑", 1.3], // lamb
-  ["🌶", 0.4], // chili
-  ["🌵", 0.2], // cactus (fun topping)
-  ["🥷", 2.5], // special
-  ["👿", 2.0], // extra spicy
+  ["🍄", 2.8], // mushrooms
+  ["🐷", 6.2], // ham/pork
+  ["🐑", 5.3], // lamb
+  ["🌶", 5.4], // chili
+  ["🌵", 12], // cactus (fun topping)
+  ["🥷", -2.5], // special
+  ["👿", -2.0], // extra spicy
 ]);
 
 export default ingredientPrices;
