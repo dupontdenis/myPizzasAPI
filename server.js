@@ -12,6 +12,7 @@ const pizzas = [
   { name: "cheese", ingredients: ["🧀", "🍅"] },
   { name: "oriental", ingredients: ["🍅", "🐑", "🍄", "🌶"] },
   { name: "royal", ingredients: ["🍅", "🌵"] },
+  { name: "special", ingredients: ["🥷", "👿"] },
 ];
 
 app.get("/", (req, res) => {
