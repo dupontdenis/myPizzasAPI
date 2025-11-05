@@ -5,10 +5,10 @@ A simple REST API for pizzas - inspired by [ghibliapi.dev](https://ghibliapi.dev
 ## Usage
 
 ```
-GET /myAPI/pizzas
+GET /API/pizzas
 ```
 
-Returns:
+Returns all pizzas:
 
 ```json
 [
@@ -51,9 +51,57 @@ Returns:
 ## Example Usage
 
 ```javascript
-fetch("https://your-app.com/myAPI/pizzas")
+fetch("https://your-app.com/API/pizzas")
   .then((res) => res.json())
   .then((pizzas) => console.log(pizzas));
+```
+
+### Search pizzas by ingredient
+
+```
+GET /API/pizzas/search?ingredient=🍅
+```
+
+### Get the price of one pizza
+
+```
+GET /API/pizzasWithPrices/:id/price
+```
+
+### Compute a custom price
+
+```
+POST /API/pizzasWithPrices/compute
+Content-Type: application/json
+{ "ingredients": ["🍅", "🧀", "🍄"] }
+```
+
+### Get all ingredient prices
+
+```
+GET /API/ingredientPrices
+```
+
+### Get a pizza by id (UUID)
+
+```
+GET /API/pizzas/:id
+```
+
+Example:
+
+```
+GET /API/pizzas/a2a7e8c6-2f0a-4a1b-9c5a-9d8f64c0c101
+```
+
+Response:
+
+```json
+{
+  "id": "a2a7e8c6-2f0a-4a1b-9c5a-9d8f64c0c101",
+  "name": "queen",
+  "ingredients": ["🐷", "🍄", "🍅", "🧀"]
+}
 ```
 
 ## Push to GitHub
