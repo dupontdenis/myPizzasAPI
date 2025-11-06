@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
       pizzaById: "/API/pizzas/:id",
       pizzasWithPrices: "/API/pizzasWithPrices",
       ingredientPrices: "/API/ingredientPrices",
-      pizzaSearchByIngredient: "/API/pizzas/search?ingredient=🍅",
+      pizzaSearchByIngredients: "/API/pizzas/search?ingredient=🍅&ingredient=🍄",
       pizzaSinglePrice: "/API/pizzasWithPrices/:id/price",
       customPrice: {
         method: "POST",

@@ -17,12 +17,12 @@ GET {{baseUrl}}/API/pizzas/a2a7e8c6-2f0a-4a1b-9c5a-9d8f64c0c101 HTTP/1.1
 
 ###
 
-### 4. Search pizzas by ingredient (tomato 🍅)
-GET {{baseUrl}}/API/pizzas/search?ingredient=🍅 HTTP/1.1
+### 4. Search pizzas by multiple ingredients (tomato 🍅 AND mushroom 🍄)
+GET {{baseUrl}}/API/pizzas/search?ingredient=🍅&ingredient=🍄 HTTP/1.1
 
 ###
 
-### 5. Search pizzas by ingredient (cheese 🧀)
+### 5. Search pizzas by single ingredient (cheese 🧀)
 GET {{baseUrl}}/API/pizzas/search?ingredient=🧀 HTTP/1.1
 
 ###

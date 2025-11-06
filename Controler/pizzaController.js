@@ -15,11 +15,14 @@ export const getPizzaById = (req, res) => {
   res.json(pizza);
 };
 
-export const searchPizzasByIngredient = (req, res) => {
+export const searchPizzasByIngredients = (req, res) => {
   const { ingredient } = req.query;
   if (!ingredient) {
     return res.status(400).json({ error: "Query param 'ingredient' is required" });
   }
-  const list = pizzas.filter((p) => p.ingredients.includes(ingredient));
+  // Express automatically converts multiple params with same name to an array
+  const ingredientList = Array.isArray(ingredient) ? ingredient : [ingredient];
+  // Filter pizzas that contain ALL specified ingredients
+  const list = pizzas.filter((p) => ingredientList.every((ing) => p.ingredients.includes(ing)));
   res.json(list);
 };
