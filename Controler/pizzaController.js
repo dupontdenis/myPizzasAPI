@@ -3,7 +3,10 @@
 import pizzas from "../Models/data.mjs";
 
 export const listPizzas = (req, res) => {
-  res.json(pizzas);
+  res.json({
+    data: pizzas,
+    count: pizzas.length,
+  });
 };
 
 export const getPizzaById = (req, res) => {
@@ -12,7 +15,9 @@ export const getPizzaById = (req, res) => {
   if (!pizza) {
     return res.status(404).json({ error: "Pizza not found" });
   }
-  res.json(pizza);
+  res.json({
+    data: pizza,
+  });
 };
 
 export const searchPizzasByIngredients = (req, res) => {
@@ -24,5 +29,8 @@ export const searchPizzasByIngredients = (req, res) => {
   const ingredientList = Array.isArray(ingredient) ? ingredient : [ingredient];
   // Filter pizzas that contain ALL specified ingredients
   const list = pizzas.filter((p) => ingredientList.every((ing) => p.ingredients.includes(ing)));
-  res.json(list);
+  res.json({
+    data: list,
+    count: list.length,
+  });
 };
